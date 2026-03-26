@@ -1,0 +1,1 @@
+SmartLink Hub is a centralized web platform that allows users to manage, organize, and share multiple important links in one place. It helps individuals create a personalized digital identity by combining all their links into a single, easy-to-access dashboard.
