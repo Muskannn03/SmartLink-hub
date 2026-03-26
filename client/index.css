@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background:
+    /* subtle grid */
+    linear-gradient(
+      rgba(0, 255, 136, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 255, 136, 0.05) 1px,
+      transparent 1px
+    ),
+    /* base gradient */
+    radial-gradient(circle at top, #0f3d2e, #000);
+
+  background-size:
+    40px 40px,
+    40px 40px,
+    cover;
+
+  color: white;
+  min-height: 100vh;
+}
+
+
+/* NAVBAR */
+/* NAVBAR CONTAINER */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #00ff9c;
+}
+
+/* RIGHT SIDE ACTIONS */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* NORMAL LINKS */
+.nav-link {
+  color: #b5ffe1;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #00ff9c;
+}
+
+/* BUTTON BASE */
+.btn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+/* DASHBOARD BUTTON */
+.dashboard-btn {
+  border: 1px solid #00ff9c;
+  color: #00ff9c;
+  background: transparent;
+}
+
+.dashboard-btn:hover {
+  background: #00ff9c;
+  color: #002b1e;
+}
+
+/* SIGNUP BUTTON */
+.signup-btn{
+  background: #00ff9c;
+  color: #002b1e;
+}
+
+.signup-btn:hover {
+  background: #00e68a;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: #00ff88;
+}
+
+.hero p {
+  margin-top: 16px;
+  color: #b6fdd9;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+/* BASE BUTTON */
+.hero-btn {
+  padding: 12px 26px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+/* PRIMARY */
+.hero-btn.primary {
+  background: #ffffff;
+  color: #002b1e;
+  border: 2px solid #ffffff;
+}
+
+.hero-btn.primary:hover {
+  background: transparent;
+  color: #ffffff;
+}
+
+/* SECONDARY */
+.hero-btn.secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.hero-btn.secondary:hover {
+  background: #ffffff;
+  color: #002b1e;
+}
+
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  padding: 40px 20px;
+}
+
+.feature {
+  background: rgba(0,255,136,0.08);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(0,255,136,0.2);
+}
+
+.feature h3 {
+  margin-bottom: 8px;
+  color: #7fffc8;
+}
+
+/* HOW IT WORKS */
+.how {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.how h2 {
+  margin-bottom: 14px;
+  color: #00ff88;
+}
+
+.how ol {
+  list-style-position: inside;
+  color: #b6fdd9;
+  line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #7fffc8;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 14px 16px;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .logo {
+    font-size: 18px;
+  }
+  
+  .nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+  
+  .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    flex: 1;
+  }
+  
+  .hero {
+    padding: 60px 16px 40px;
+  }
+  
+  .hero h1 {
+    font-size: 28px;
+  }
+  
+  .hero p {
+    font-size: 14px;
+    max-width: 100%;
+    padding: 0 8px;
+  }
+  
+  .hero-actions {
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+    padding: 30px 16px;
+    gap: 14px;
+  }
+  
+  .how {
+    padding: 30px 16px;
+  }
+  
+  .how ol {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 12px;
+  }
+  
+  .logo {
+    font-size: 16px;
+  }
+  
+  .btn {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  
+  .btn.big {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  
+  .hero {
+    padding: 50px 12px 30px;
+  }
+  
+  .hero h1 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  
+  .hero p {
+    font-size: 13px;
+    margin-top: 12px;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .btn.big {
+    width: 100%;
+  }
+  
+  .features {
+    padding: 20px 12px;
+    gap: 12px;
+  }
+  
+  .feature {
+    padding: 16px;
+  }
+  
+  .feature h3 {
+    font-size: 16px;
+  }
+  
+  .feature p {
+    font-size: 13px;
+  }
+  
+  .how {
+    padding: 20px 12px;
+  }
+  
+  .how h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .how ol {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  
+  footer {
+    padding: 16px 12px;
+    font-size: 12px;
+  }
+}
+/* NOISE TEXTURE OVERLAY */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+body > * {
+  position: relative;
+  z-index: 1;
+}

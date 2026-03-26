@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard • Smart Link Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <h2>⚡ Smart Link </h2>
+    <a href="smartlink.html" target="_blank" class="view-link">View Smart Link</a>
+  </header>
+  <div class="page-title">
+    <h1>Dashboard</h1>
+    <p>Manage your links, rules, and analytics</p>
+  </div>
+
+
+  <main class="container">
+
+    <!-- ADD LINK -->
+    <section class="card">
+      <h3>Add New Link</h3>
+
+      <input id="title" placeholder="Link Title (Instagram)" />
+      <input id="url" placeholder="Link URL (https://...)" />
+      <input id="priority" type="number" placeholder="Priority (1 = top)" />
+
+      <button onclick="addLink()">Add Link</button>
+    </section>
+
+    <!-- ADD RULE -->
+    <section class="card">
+      <h3>Add Rule</h3>
+
+      <select id="ruleTarget">
+        <option>Select Link</option>
+      </select>
+
+      <select id="condition">
+        <option value="device">Device</option>
+        <option value="time">Time</option>
+      </select>
+
+      <select id="deviceRule">
+        <option value="all">All Devices</option>
+        <option value="mobile">Mobile Only</option>
+        <option value="desktop">Desktop Only</option>
+      </select>
+
+      <select id="timeRule">
+        <option value="all">All Time</option>
+        <option value="day">Day Only</option>
+        <option value="night">Night Only</option>
+      </select>
+
+
+      <button onclick="addRule()">Add Rule</button>
+    </section>
+
+    <!-- LINKS LIST -->
+    <section class="card">
+      <h3>Your Links</h3>
+      <ul id="linksList"></ul>
+    </section>
+
+    <!-- ANALYTICS -->
+    <section class="card" style="--i:4">
+      <h3>Analytics</h3>
+      <div class="divider"></div>
+
+      <div id="chart" class="chart"></div>
+    </section>
+
+  </main>
+  <button onclick="logout()">Logout</button>
+
+  <script src="dashboard.js"></script>
+</body>
+
+</html>

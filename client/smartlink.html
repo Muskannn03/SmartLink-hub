@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Link Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="smartlink.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">⚡</div>
+    <h1>Smart Link Hub</h1>
+    <p class="tagline">One link. Context-aware. Intelligent.</p>
+  </header>
+
+  <!-- CREATOR CARD -->
+  <section class="creator">
+    <div class="avatar">👤</div>
+    <div>
+      <h2>@creator</h2>
+      <p>All my important links in one smart place</p>
+    </div>
+  </section>
+
+  <!-- CONTEXT -->
+  <section class="context">
+    <div id="device">🖥 Desktop</div>
+    <div id="time">🌙 Night</div>
+    <div>⚙ Smart Rules ON</div>
+  </section>
+
+  <!-- COPY SMART LINK -->
+  <button class="copy-btn" onclick="copySmartLink()">🔗 Copy Smart Link</button>
+  <div id="toast">Link copied!</div>
+
+  <!-- LINKS -->
+  <section class="links" id="linksContainer"></section>
+
+  <!-- INFO -->
+  <section class="info">
+    <h3>Why is this smart?</h3>
+    <ul>
+      <li>📱 Links adapt to device & time</li>
+      <li>📊 Most clicked links move up</li>
+      <li>🧠 Rules decide what you see</li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    Powered by <strong>Smart Link Hub</strong>
+  </footer>
+
+</div>
+
+<script src="smartlink.js"></script>
+</body>
+</html>
+
+

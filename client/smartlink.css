@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0f3d2e, #020d09);
+  color: #eafff5;
+}
+
+.app {
+  max-width: 430px;
+  margin: auto;
+  padding: 22px 18px 40px;
+  width: 100%;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.logo {
+  font-size: 28px;
+}
+
+.header h1 {
+  margin: 6px 0 4px;
+}
+
+.tagline {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+/* CREATOR */
+.creator {
+  display: flex;
+  gap: 14px;
+  background: rgba(0,0,0,0.45);
+  padding: 16px;
+  border-radius: 18px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  background: #00ff88;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #00331d;
+  font-size: 22px;
+  
+}
+
+/* CONTEXT */
+.context {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.context div {
+  background: rgba(255,255,255,0.08);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* COPY BUTTON */
+.copy-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  border: none;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 22px;
+}
+
+/* TOAST */
+#toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00ff88;
+  color: #00331d;
+  padding: 10px 16px;
+  border-radius: 999px;
+  display: none;
+}
+
+/* LINKS */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.link {
+  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  color: #00331d;
+  padding: 16px 18px;
+  border-radius: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 12px 28px rgba(0,255,136,0.25);
+}
+
+.link small {
+  opacity: 0.7;
+  font-size: 12px;
+}
+
+/* INFO */
+.info {
+  background: rgba(255,255,255,0.06);
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 28px;
+}
+
+.info ul {
+  padding-left: 18px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 480px) {
+  .app {
+    padding: 16px 12px 32px;
+  }
+  
+  .header h1 {
+    font-size: 22px;
+  }
+  
+  .tagline {
+    font-size: 12px;
+  }
+  
+  .creator {
+    gap: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .avatar {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+  
+  .context {
+    gap: 6px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  
+  .context div {
+    flex: 1;
+    min-width: calc(50% - 3px);
+    text-align: center;
+  }
+  
+  .copy-btn {
+    padding: 12px;
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+  
+  .link {
+    padding: 12px 14px;
+    font-size: 14px;
+    gap: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .link small {
+    font-size: 11px;
+  }
+  
+  .info {
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .info h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .info ul {
+    padding-left: 16px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .app {
+    padding: 28px 20px 40px;
+  }
+  
+  .creator {
+    padding: 14px;
+  }
+  
+  .context {
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 769px) {
+  .app {
+    padding: 32px 24px 48px;
+  }
+}
